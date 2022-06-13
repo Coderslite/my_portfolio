@@ -1278,6 +1278,40 @@
 
 </body>
 
+<script>
+  $(document).ready(function(){
+    $('#contact-form').on('submit',function(e){
+      e.preventDefault();    
+			    var formData = new FormData(this);
+      $.ajax({
+              url: 'php/mail.php',
+			        type: 'POST',
+                contentType: false,
+                cache: false,
+                processData: false,
+                data: formData,
+                dataType: 'json',
+              beforeSend:function(){
+                // alert("Loading...");
+                // $('#contact-submit').html("loading....");
+              },
+        success: function(data){
+          if(data.trim() == 'success'){
+            alert("success");
+          }
+          else{
+            alert("failed");
+          }
+        },
+        error:function(){
+          // $('#contact-submit').html("Retry");
+          alert("something went wrong");
+        }
+      })
+    })
+  })
+</script>
+
 
 <!-- Mirrored from avstechnolabs.com/Themeforest/Gaspar/01/Dark/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jun 2022 23:47:29 GMT -->
 </html>
