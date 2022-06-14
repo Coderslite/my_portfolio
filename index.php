@@ -1142,7 +1142,7 @@
                   <!-- Contact form -->
                   <div class="col-lg-7 col-12 ">
                     <form class="contact-form animate__animated animate__fadeInLeft animate__delay-2s"
-                      id="contact-form">
+                      action="index.php" method="POST">
                       <h4 class="content-title">contact me</h4>
                       <div class="row">
                         <div class="col-12 col-md-6 form-group"><input class="form-control" id="contact-name"
@@ -1154,7 +1154,7 @@
                         <div class="col-12 form-group form-message"><textarea class="form-control" id="contact-message"
                             name="message" placeholder="Message" rows="5" required=""></textarea></div>
                         <div class="col-12 mb-4 form-submit"><button class="clickbtn button-main button-scheme"
-                            id="contact-submit" type="submit">Send Message</button>
+                            id="contact-submit" type="submit" name="submit">Send Message</button>
                         </div>
                       </div>
                     </form>
@@ -1310,6 +1310,12 @@
       })
     })
   })
+  <?php
+  if(isset($_POST['submit'])){
+    echo "Hello";
+  }
+
+  ?>
 </script>
 
 
