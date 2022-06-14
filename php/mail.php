@@ -9,7 +9,7 @@ $mail->isSMTP();
 $mail->Host = 'localhost';
 $mail->SMTPAuth = false;
 $mail->SMTPAutoTLS = false; 
-$mail->addReplyTo('abrahamgreatebele@gmail.com', 'Your Name');
+$mail->addReplyTo('abrahamgreatebele@gmail.com', 'Abraham Great');
 $mail->addAddress('abrahamgreatebele@gmail.com', 'Great');
 $mail->Port =  25;
 // Sender info 
